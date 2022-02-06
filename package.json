@@ -1,0 +1,17 @@
+{
+  "name": "segundo-projeto-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:leticiaenz/segundo-projeto-node.git",
+  "author": "Leticia de Godoy Enz <leticia.enz11@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js" 
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

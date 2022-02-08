@@ -1,14 +1,14 @@
 
 interface Course {
     name: String;
-    duration: number; 
+    duration?: number; 
     educator: string;
 }
 
 class CreateCourseService {
 
-    execute({ name, educator, duration}: Course){
-        console.log(name, educator, educator);
+    execute({ name, duration = 8, educator}: Course){
+        console.log(name, duration, educator);
     }
 }
 

@@ -1,6 +1,8 @@
-import express, { request } from 'express';
+import express from 'express';
 
 const app =  express();
+
+app.use(express.json());
 
 app.get("/", (request, response) => {
     return response. json({ message: "hello Word"});
@@ -8,6 +10,7 @@ app.get("/", (request, response) => {
 
 app.post("/courses", (request, reponse) => {
     const { name } = request.body;
+    
     return reponse.json({ name });
 })
 

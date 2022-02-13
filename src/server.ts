@@ -1,18 +1,10 @@
 import express from 'express';
+import { categoriesRoutes } from '../routes/categories.routes';
 
 const app =  express();
 
 app.use(express.json());
 
-app.get("/", (request, response) => {
-    return response. json({ message: "hello Word"});
-});
-
-app.post("/courses", (request, reponse) => {
-    const { name } = request.body;
-    
-    return reponse.json({ name });
-})
-
+app.use(categoriesRoutes);
 
 app.listen(3333, () => console.log("Sever is running"));

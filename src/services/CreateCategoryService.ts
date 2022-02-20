@@ -6,7 +6,7 @@ interface IRequest {
 }
 
 class CreateCategoryService {
-    constructor(private categoriesRepository): CategoriesRepository) {}
+    constructor(private categoriesRepository: CategoriesRepository) {}
 
     execute({ description, name }: IRequest): void {
     

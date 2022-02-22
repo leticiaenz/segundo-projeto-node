@@ -1,5 +1,5 @@
 import { request, Router } from "express";
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
+import { CategoriesRepository } from "../src/modules/cars/repositories/CategoriesRepository";
 import { CreateCategoryService } from "../src/services/CreateCategoryService";
 
 

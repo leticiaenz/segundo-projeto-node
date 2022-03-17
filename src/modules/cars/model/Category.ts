@@ -12,7 +12,6 @@ class Category {
             this.id = uuidv4();
         }
     }
-
 };
 
 

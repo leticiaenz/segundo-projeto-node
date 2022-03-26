@@ -6,75 +6,74 @@
         "version": "1.0.0",
         "content": {
             "email": "leticia.enz11@gmail.com"
-        },
-        "path": {
-            "/categorires": {
-                "post": {
-                    "tags": ["Category"],
-                    "summary": "Create a category",
-                    "description": "Create a new category",
-                    "requestBody": {
+        }
+        
+    }, 
+    "paths": {
+        "/categories": {
+            "post": {
+                "tags": ["Category"],
+                "summary": "Create a category",
+                "description": "Create a new category",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }                        
+                                },
+                                "exemple": {
+                                    "name": "category name sample",
+                                    "description": "Category desciption sample"
+                                }
+                            }
+                        }
+                    }
+                },
+                "reponses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "Category already exists"
+                    }
+                }
+
+            },
+            "get": {
+                "tags": ["Category"],
+                "summary": "List all categories",
+                "description": "List all categories",
+                "response": {
+                    "200": {
+                        "description": "Sucess",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "object",
-                                    "proprerties": {
-                                        "name": {
-                                            "type": "string"
-                                        },
-                                        "description": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "example": {
-                                        "name": "category name sample",
-                                        "description": "Category description sample"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "responses": {
-                        "201": {
-                            "description": "Created"
-                        },
-                        "500": {
-                            "description": "Category already exists"
-                        }
-                    }
-                },  
-                "get": {
-                    "tags": ["Category"],
-                    "suwwary": "List all categories",
-                    "description": "List all categories",
-                    "response": {
-                        "200": { 
-                            "description": "Sucess",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "array",
-                                        "items": {
-                                            "types": "object",
-                                            "properties":{
-                                                "name": { 
-                                                    "type": "string"
-                                                },
-                                                "descritpion": {
-                                                    "type": "string"
-                                                }
-
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "type": "string"
                                             }
-                                        }
+                                        } 
                                     }
-                                    
-                                }
-                            }
+                                }                            }
                         }
                     }
                 }
             }
         }
-
     }
+
 }
